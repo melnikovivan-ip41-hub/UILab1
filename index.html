@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Довідник інтерфейсних елементів</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Десять елементів, з&nbsp;яких складено майже кожен інтерфейс</h1>
+    <p class="hero-text">Нижче - десять базових UI-компонентів. Кожен показано як окремий зразок: короткий опис призначення зліва, робочий приклад справа. Усі приклади живі - з ними можна взаємодіяти прямо тут.</p>
+  </div>
+</header>
+
+<main class="wrap specimens">
+
+  <!-- 01 Radiobutton -->
+  <section class="specimen" id="radio">
+    <div class="specimen-number">01</div>
+    <div class="specimen-info">
+      <h2>Перемикач <span class="en">Radio button</span></h2>
+      <p>Дозволяє обрати рівно один варіант зі списку взаємовиключних опцій. Використовують, коли варіантів мало (2–5) і всі вони мають бути видимі одразу, без додаткового кліку.</p>
+    </div>
+    <div class="specimen-demo">
+      <fieldset>
+        <legend>Спосіб доставки</legend>
+        <label class="option"><input type="radio" name="delivery" value="Кур'єром" checked> Кур'єром</label>
+        <label class="option"><input type="radio" name="delivery" value="Самовивіз"> Самовивіз</label>
+        <label class="option"><input type="radio" name="delivery" value="Поштою"> Поштою</label>
+      </fieldset>
+      <p class="demo-output" id="radio-output">Обрано: Кур'єром</p>
+    </div>
+  </section>
+
+  <!-- 02 Checkbox -->
+  <section class="specimen" id="checkbox">
+    <div class="specimen-number">02</div>
+    <div class="specimen-info">
+      <h2>Прапорець <span class="en">Checkbox</span></h2>
+      <p>На відміну від перемикача, кожен прапорець вмикається чи вимикається незалежно від інших. Підходить для незалежних опцій або окремого «так/ні»-налаштування.</p>
+    </div>
+    <div class="specimen-demo">
+      <label class="option"><input type="checkbox" class="pref" checked> Отримувати розсилку новин</label>
+      <label class="option"><input type="checkbox" class="pref"> Темна тема інтерфейсу</label>
+      <label class="option"><input type="checkbox" class="pref"> Запам'ятати мене на цьому пристрої</label>
+      <p class="demo-output" id="checkbox-output">Позначено: 1 із 3</p>
+    </div>
+  </section>
+
+  <!-- 03 Text input -->
+  <section class="specimen" id="text-input">
+    <div class="specimen-number">03</div>
+    <div class="specimen-info">
+      <h2>Текстове поле <span class="en">Text input</span></h2>
+      <p>Приймає довільний текст, який вводить користувач: ім'я, email, коментар тощо. Головний спосіб отримати від людини дані, яких немає в наперед визначеному списку.</p>
+    </div>
+    <div class="specimen-demo">
+      <label class="field-label" for="name-field">Ваше ім'я</label>
+      <input type="text" id="name-field" placeholder="Напишіть тут..." maxlength="24">
+      <p class="demo-output" id="text-output">Привіт, незнайомцю! (0/24)</p>
+    </div>
+  </section>
+
+  <!-- 04 Tabs -->
+  <section class="specimen" id="tabs">
+    <div class="specimen-number">04</div>
+    <div class="specimen-info">
+      <h2>Вкладки <span class="en">Tabs</span></h2>
+      <p>Розділяють великий обсяг контенту на розділи, які займають одне й те саме місце на екрані. Дозволяють перемикатися між ними без переходу на іншу сторінку.</p>
+    </div>
+    <div class="specimen-demo">
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="overview" role="tab">Огляд</button>
+        <button class="tab-btn" data-tab="specs" role="tab">Характеристики</button>
+        <button class="tab-btn" data-tab="reviews" role="tab">Відгуки</button>
+      </div>
+      <div class="tab-panel active" data-panel="overview">Похідний рюкзак на 30 літрів з водовідштовхувальної тканини, легкий каркас і три зовнішні кишені.</div>
+      <div class="tab-panel" data-panel="specs">Вага: 950 г. Об'єм: 30 л. Матеріал: рипстоп 210D. Водостійка блискавка на головному відділенні.</div>
+      <div class="tab-panel" data-panel="reviews">«Ношу третій сезон поспіль - жодного шва не розійшлося» - оцінка 4.7 з 5 на основі 128 відгуків.</div>
+    </div>
+  </section>
+
+  <!-- 05 Button -->
+  <section class="specimen" id="button">
+    <div class="specimen-number">05</div>
+    <div class="specimen-info">
+      <h2>Кнопка <span class="en">Button</span></h2>
+      <p>Запускає дію: надсилає форму, зберігає дані, викликає функцію. На відміну від посилання, кнопка щось <em>робить</em>, а не кудись веде.</p>
+    </div>
+    <div class="specimen-demo">
+      <button class="btn" id="count-btn">Порахувати клік</button>
+      <p class="demo-output" id="button-output">Натискань: 0</p>
+    </div>
+  </section>
+
+  <!-- 06 Text label -->
+  <section class="specimen" id="label">
+    <div class="specimen-number">06</div>
+    <div class="specimen-info">
+      <h2>Текстова мітка <span class="en">Label</span></h2>
+      <p>Пояснює призначення поля чи елемента керування - і візуально, і для програм зчитування з екрана. Атрибут <code>for</code> мітки пов'язує її з <code>id</code> поля.</p>
+    </div>
+    <div class="specimen-demo">
+      <label class="field-label" for="email-field">Електронна пошта</label>
+      <input type="email" id="email-field" placeholder="ви@пошта.com">
+      <p class="demo-output">Спробуйте клацнути на підпис «Електронна пошта» - фокус переходить у поле саме завдяки зв'язку label ↔ input.</p>
+    </div>
+  </section>
+
+  <!-- 07 Link -->
+  <section class="specimen" id="link">
+    <div class="specimen-number">07</div>
+    <div class="specimen-info">
+      <h2>Посилання <span class="en">Link</span></h2>
+      <p>Веде користувача на іншу сторінку, ресурс чи розділ поточної сторінки. На відміну від кнопки, посилання переміщує, а не виконує дію на місці.</p>
+    </div>
+    <div class="specimen-demo">
+      <p><a class="link" href="https://developer.mozilla.org/uk/docs/Web/HTML/Element/a" target="_blank" rel="noopener">Специфікація елемента &lt;a&gt; на MDN</a> - відкривається в новій вкладці.</p>
+      <p><a class="link" href="#" id="reveal-link">Показати додаткові умови доставки</a></p>
+      <p class="demo-output hidden" id="reveal-text">Безкоштовна доставка від 1000 грн, термін - 2–5 робочих днів залежно від регіону.</p>
+    </div>
+  </section>
+
+  <!-- 08 Tooltip -->
+  <section class="specimen" id="tooltip">
+    <div class="specimen-number">08</div>
+    <div class="specimen-info">
+      <h2>Підказка <span class="en">Tooltip</span></h2>
+      <p>Показує коротку додаткову інформацію при наведенні або фокусі, не займаючи постійного місця в інтерфейсі. Добре підходить для пояснення незрозумілих полів чи іконок.</p>
+    </div>
+    <div class="specimen-demo">
+      <label class="field-label" for="pw-field">Пароль
+        <span class="tooltip-wrap">
+          <button type="button" class="info-icon" aria-describedby="pw-tip">?</button>
+          <span class="tooltip-bubble" role="tooltip" id="pw-tip">Мінімум 8 символів, одна цифра та одна велика літера.</span>
+        </span>
+      </label>
+      <input type="password" id="pw-field" placeholder="••••••••">
+    </div>
+  </section>
+
+  <!-- 09 Dropdown -->
+  <section class="specimen" id="dropdown">
+    <div class="specimen-number">09</div>
+    <div class="specimen-info">
+      <h2>Випадаючий список <span class="en">Dropdown</span></h2>
+      <p>Дозволяє обрати один варіант із наперед визначеного переліку, приховуючи решту варіантів, доки список не розкрито. Економить місце, коли варіантів багато.</p>
+    </div>
+    <div class="specimen-demo">
+      <label class="field-label" for="plan-select">Тарифний план</label>
+      <select id="plan-select">
+        <option value="0">Базовий - 0 грн/міс</option>
+        <option value="149" selected>Стандарт - 149 грн/міс</option>
+        <option value="399">Преміум - 399 грн/міс</option>
+      </select>
+      <p class="demo-output" id="plan-output">Обрано план «Стандарт» - 149 грн/міс</p>
+    </div>
+  </section>
+
+  <!-- 10 Data grid -->
+  <section class="specimen" id="grid">
+    <div class="specimen-number">10</div>
+    <div class="specimen-info">
+      <h2>Таблиця даних <span class="en">Data grid</span></h2>
+      <p>Показує структуровані дані у вигляді рядків і стовпців. Часто підтримує сортування та фільтрацію - клацніть на заголовок стовпця нижче, щоб відсортувати рядки.</p>
+    </div>
+    <div class="specimen-demo">
+      <table class="grid" id="data-grid">
+        <thead>
+          <tr>
+            <th data-key="name" data-type="text">Товар</th>
+            <th data-key="category" data-type="text">Категорія</th>
+            <th data-key="price" data-type="number">Ціна, грн</th>
+            <th data-key="stock" data-type="number">Залишок</th>
+          </tr>
+        </thead>
+        <tbody id="grid-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
